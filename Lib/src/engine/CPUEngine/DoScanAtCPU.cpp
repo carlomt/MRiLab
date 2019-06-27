@@ -64,7 +64,7 @@ and multi-threading (OpenMP) written by Fang Liu (leoliuf@gmail.com).
 
 /* includes CPU kernel */
 #include "BlochKernel.h"
-extern "C" bool mxUnshareArray(mxArray *array_ptr, bool noDeepCopy);
+// extern "C" bool mxUnshareArray(mxArray *array_ptr, bool noDeepCopy);
 
 /* MEX entry function */
 void mexFunction(int nlhs, mxArray *plhs[],int nrhs, const mxArray *prhs[])

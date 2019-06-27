@@ -1,14 +1,14 @@
 
 IF (IPP_FOUND) # use ipp
     # compile kernels for shader models 20 30 35 50, support double-precision floating-point operation
-    set(CUDA_NVCC_FLAGS -Xcompiler -fPIC -use_fast_math -gencode=arch=compute_20,code="sm_20,compute_20"  
+    set(CUDA_NVCC_FLAGS -Xcompiler -fPIC -use_fast_math #-gencode=arch=compute_20,code="sm_20,compute_20"  
 																								 -gencode=arch=compute_30,code="sm_30,compute_30" 
 																								 -gencode=arch=compute_35,code="sm_35,compute_35" 
 																								 -gencode=arch=compute_50,code="sm_50,compute_50" 
 																								--ptxas-options=-v -DMATLAB_MEX_FILE -DIPP)
 else (IPP_FOUND) # use framewave
     # compile kernels for shader models 20 21 30 35 50, support double-precision floating-point operation
-    set(CUDA_NVCC_FLAGS -Xcompiler -fPIC -use_fast_math -gencode=arch=compute_20,code="sm_20,compute_20"
+    set(CUDA_NVCC_FLAGS -Xcompiler -fPIC -use_fast_math #-gencode=arch=compute_20,code="sm_20,compute_20"
 																								 -gencode=arch=compute_30,code="sm_30,compute_30" 
 																								 -gencode=arch=compute_35,code="sm_35,compute_35" 
 																								 -gencode=arch=compute_50,code="sm_50,compute_50" 

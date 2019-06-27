@@ -70,7 +70,7 @@
 
 /* includes CUDA kernel */
 #include "BlochKernelME.cuh"
-extern "C" bool mxUnshareArray(mxArray *array_ptr, bool noDeepCopy);
+// extern "C" bool mxUnshareArray(mxArray *array_ptr, bool noDeepCopy);
 
 /* MEX entry function */
 void mexFunction(int nlhs, mxArray *plhs[],int nrhs, const mxArray *prhs[])
